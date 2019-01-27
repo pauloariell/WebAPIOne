@@ -14,11 +14,19 @@ namespace WebAPIOne
             // Web API routes
             config.MapHttpAttributeRoutes();
 
-            config.Routes.MapHttpRoute(
+            //Exemplo de como configurar uma outra rota e expecifica pra uma controller
+            /*config.Routes.MapHttpRoute(
+                name: "ProdApi",
+                routeTemplate: "api/prod/{id}",
+                defaults: new { controller = "products", id = RouteParameter.Optional }
+            );*/
+
+            //Default Route
+            /*config.Routes.MapHttpRoute(
                 name: "DefaultApi",
                 routeTemplate: "api/{controller}/{id}",
                 defaults: new { id = RouteParameter.Optional }
-            );
+            );*/
         }
     }
 }
